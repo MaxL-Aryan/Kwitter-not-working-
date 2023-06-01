@@ -1,13 +1,13 @@
 //YOUR FIREBASE LINKS
 // Your web app's Firebase configuration
 var firebaseConfig = {
-      apiKey: "AIzaSyD6EWjHvvnQmNBXj5oncqJuT7ptjL_x1iM",
-      authDomain: "kwitter-ae778.firebaseapp.com",
-      databaseURL: "https://kwitter-ae778-default-rtdb.firebaseio.com",
-      projectId: "kwitter-ae778",
-      storageBucket: "kwitter-ae778.appspot.com",
-      messagingSenderId: "989607291373",
-      appId: "1:989607291373:web:b1c419f09fb0fd8a919fe4"
+      apiKey: "AIzaSyCOO2QTg4r7IYynP3_ZgkaJhcjCnwPuKjY",
+      authDomain: "invite-2dc85.firebaseapp.com",
+      databaseURL: "https://invite-2dc85-default-rtdb.firebaseio.com",
+      projectId: "invite-2dc85",
+      storageBucket: "invite-2dc85.appspot.com",
+      messagingSenderId: "835675356367",
+      appId: "1:835675356367:web:2173fe58c19dffde880bba"
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
@@ -48,10 +48,12 @@ function updateLike(message_id)
       likes=document.getElementById(button_id).value;
       updated_likes=Number(likes)+1;
       console.log(updated_likes);
-
+ 
       firebase.database().ref(room_name).child(message_id).update({ like : updated_likes });
 }
 function leave()
 {
       window.location="kwitter_room.html";
 }
+
+document.getElementById("user_nme").innerHTML=user_name;
